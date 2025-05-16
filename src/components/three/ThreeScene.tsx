@@ -60,8 +60,8 @@ function Model(props: { mousePosition: { x: number, y: number } }) {
           <mesh key={i} position={[x, y, z]} scale={[0.1, 0.1, 0.1]}>
             <sphereGeometry args={[1, 16, 16]} />
             <meshStandardMaterial 
-              color="#F97316" 
-              emissive="#F97316"
+              color="#fff" 
+              emissive="#fff"
               emissiveIntensity={0.8}
             />
           </mesh>
