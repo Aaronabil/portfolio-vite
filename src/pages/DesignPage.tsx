@@ -8,7 +8,7 @@ const designProjects = [
     id: 1,
     title: "Album Cover",
     description: "Photos for music albums.",
-    image: "images/canva1.png",
+    image: "public/images/canva1.png",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -17,7 +17,7 @@ const designProjects = [
     id: 2,
     title: "Stamps",
     description: "Gatau bingung mau isi apa.",
-    image: "images/canva2.png",
+    image: "public/images/canva2.png",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -26,7 +26,7 @@ const designProjects = [
     id: 3,
     title: "Album Music",
     description: "Photos for music albums.",
-    image: "images/canva3.jpg",
+    image: "public/images/canva3.jpg",
     link: "#",
     figmaLink: "#",
     type: "Design System"
@@ -35,7 +35,7 @@ const designProjects = [
     id: 4,
     title: "Closing the year 2023",
     description: "A design to close the year 2023.",
-    image: "images/canva4.jpg",
+    image: "public/images/canva4.jpg",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -44,7 +44,7 @@ const designProjects = [
     id: 5,
     title: "Genshin Impact",
     description: "Genshin impact characters with double hydro and double anemo.",
-    image: "images/canva5.jpg",
+    image: "public/images/canva5.jpg",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -53,7 +53,7 @@ const designProjects = [
     id: 6,
     title: "Logo Studio",
     description: "A logo for a studio.",
-    image: "images/canva6.jpg",
+    image: "public/images/canva6.jpg",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -62,7 +62,7 @@ const designProjects = [
     id: 7,
     title: "Porsche",
     description: "A porsche 911 gtr car design for racing with the trex model.",
-    image: "images/canva7.jpg",
+    image: "public/images/canva7.jpg",
     link: "#",
     figmaLink: "#",
     type: "Website Design"
@@ -71,7 +71,7 @@ const designProjects = [
     id: 8,
     title: "Genshin Impact",
     description: "A genshin impact character deskmat design.",
-    image: "images/canva8.jpg",
+    image: "public/images/canva8.jpg",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
@@ -80,7 +80,7 @@ const designProjects = [
     id: 9,
     title: "Genshin Impact",
     description: "A hydro archon character named furina.",
-    image: "images/canva9.png",
+    image: "public/images/canva9.png",
     link: "#",
     figmaLink: "#",
     type: "Website Design"
