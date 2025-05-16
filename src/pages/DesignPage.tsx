@@ -8,7 +8,7 @@ const designProjects = [
     id: 1,
     title: "Album Cover",
     description: "Photos for music albums.",
-    image: "images/canva1.png",
+    image: "canva1.png",
     link: "#",
     figmaLink: "#",
     type: "Graphic Design"
