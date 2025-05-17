@@ -122,16 +122,16 @@ const HomePage = () => {
           >
             <div className="order-2 lg:order-1">
               <span className="inline-block px-3 py-1 bg-dark-200 text-primary-400 rounded-full text-sm mb-4">
-                Frontend Development & Security
+                Frontend Development & Design
               </span>
-              <h3 className="text-2xl font-bold mb-4">SecureBank App Interface</h3>
+              <h3 className="text-2xl font-bold mb-4">Cashier App Interface</h3>
               <p className="mb-6">
-                A complete redesign of a banking application with a focus on security, usability, and modern design principles. The project involved extensive user research, security auditing, and implementation of best practices.
+                An application for Madura stalls that is simple, light and minimalist with a fresh design touch.
               </p>
               <ul className="flex flex-wrap gap-2 mb-6">
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">React</li>
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">TypeScript</li>
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Tailwind CSS</li>
+                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">CodeIgniter</li>
+                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">PHP</li>
+                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Bootstrap</li>
                 <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Security Audit</li>
               </ul>
               <Link to="/projects" className="btn btn-primary">
@@ -141,7 +141,7 @@ const HomePage = () => {
             <div className="order-1 lg:order-2">
               <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow">
                 <img 
-                  src="https://images.pexels.com/photos/6347708/pexels-photo-6347708.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                  src="public/images/foto.jpg" 
                   alt="SecureBank App Interface" 
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />

@@ -203,7 +203,7 @@ const ProjectsPage = () => {
               Check out my GitHub for additional projects, contributions, and code samples.
             </p>
             <a 
-              href="https://github.com" 
+              href="https://github.com/aaronabil" 
               target="_blank" 
               rel="noopener noreferrer"
               className="btn btn-outline inline-flex items-center"
