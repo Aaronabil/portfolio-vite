@@ -8,33 +8,33 @@ import SectionContainer from '../components/shared/SectionContainer';
 const projects = [
   {
     id: 1,
-    title: "SecureBank App Interface",
+    title: "Cashier App Interface",
     description: "A complete redesign of a banking application with a focus on security, usability, and modern design principles.",
-    image: "https://images.pexels.com/photos/6347708/pexels-photo-6347708.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "public/images/kasir.jpg",
     link: "#",
-    github: "#",
-    categories: ["design", "security"],
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Security Audit"]
+    github: "https://github.com/Aaronabil/kasir-visual",
+    categories: ["Frontend","Design", "Security"],
+    technologies: ["CodeIgniter", "PHP", "Bootstrap", "Security Audit"]
   },
   {
     id: 2,
-    title: "E-commerce Dashboard",
+    title: "Task App",
     description: "A comprehensive dashboard for e-commerce store owners featuring analytics, inventory management, and order processing.",
-    image: "https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "public/images/filament.png",
     link: "#",
-    github: "#",
-    categories: ["frontend", "design"],
-    technologies: ["Next.js", "TypeScript", "Chakra UI", "Chart.js"]
+    github: "https://github.com/ophari/to_do_list_laravel-filament",
+    categories: ["Frontend", "Design"],
+    technologies: ["Fillament", "Laravel", "PHP", "Blade"]
   },
   {
     id: 3,
-    title: "Crypto Security Scanner",
+    title: "Portfolio V1",
     description: "A tool for analyzing smart contracts and cryptocurrency wallets for potential security vulnerabilities.",
-    image: "https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "#",
-    github: "#",
-    categories: ["security", "frontend"],
-    technologies: ["React", "Node.js", "Blockchain APIs", "Ethers.js"]
+    image: "public/images/v1.jpg",
+    link: "https://aaronabil.github.io/portfolio-1/",
+    github: "https://github.com/Aaronabil/portfolio-1",
+    categories: ["Frontend"],
+    technologies: ["HTML", "CSS", "JavaScript"]
   },
   {
     id: 4,
@@ -164,8 +164,8 @@ const ProjectsPage = () => {
                       <span 
                         key={category} 
                         className={`text-xs px-2 py-1 rounded-full ${
-                          category === 'frontend' ? 'bg-primary-900 text-primary-300' :
-                          category === 'design' ? 'bg-secondary-900 text-secondary-300' :
+                          category === 'Frontend' ? 'bg-primary-900 text-primary-300' :
+                          category === 'Design' ? 'bg-secondary-900 text-secondary-300' :
                           'bg-accent-900 text-accent-300'
                         }`}
                       >

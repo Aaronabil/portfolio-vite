@@ -65,9 +65,9 @@ const AboutPage = () => {
             >
               <div className="relative h-96 rounded-lg overflow-hidden border border-primary-800 animate-glow">
                 <img 
-                  src="images/masmulet.jpg" 
+                  src="images/guaa.jpg" 
                   alt="Muhamad Nabil Faiz Amrullah" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover [object-position:50%_45%]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-500 via-transparent to-transparent"></div>
               </div>
