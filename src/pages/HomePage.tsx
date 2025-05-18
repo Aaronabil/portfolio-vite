@@ -141,7 +141,7 @@ const HomePage = () => {
             <div className="order-1 lg:order-2">
               <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow">
                 <img 
-                  src="public/images/foto.jpg" 
+                  src="/images/foto.jpg" 
                   alt="SecureBank App Interface" 
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 />
