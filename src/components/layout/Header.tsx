@@ -41,7 +41,7 @@ const Header = () => {
   
   const socialLinks = [
     { icon: <Github className="h-5 w-5" />, label: 'GitHub', href: 'https://github.com/Aaronabil' },
-    { icon: <Linkedin className="h-5 w-5" />, label: 'LinkedIn', href: 'https://linkedin.comhttps://linkedin.com/in/muhamad-nabil-faiz-amrullah-66b90626b/' },
+    { icon: <Linkedin className="h-5 w-5" />, label: 'LinkedIn', href: 'https://linkedin.com/in/muhamad-nabil-faiz-amrullah-66b90626b/' },
   ];
 
   return (
