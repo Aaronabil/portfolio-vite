@@ -3,6 +3,7 @@ import { Layout, Smartphone, Monitor, Figma } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
 import TiltedCard from '../components/reactbits/TiltedCard';
+import ScrollVelocity from '../components/reactbits/ScrollVelocity';
 
 const designProjects = [
   {
@@ -123,7 +124,13 @@ const DesignPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="mb-6">Design Showcase</h1>
+            <h1>
+              <ScrollVelocity
+                texts={['Design', 'Showcase']} 
+                velocity={100} 
+                className="custom-scroll-text mb-2"
+              />
+            </h1>
             <p className="text-xl mb-12">
               Exploring the intersection of aesthetics and functionality with design solutions that blend beauty, usability, and purpose.
             </p>

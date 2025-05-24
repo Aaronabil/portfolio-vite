@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, AlertTriangle, CheckCircle, Code, FileCode } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+import ScrollVelocity from '../components/reactbits/ScrollVelocity';
 
 const securityPosts = [
   {
@@ -73,7 +74,13 @@ const CyberSecurityPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="mb-6">Cybersecurity Insights</h1>
+            <h1>
+              <ScrollVelocity
+                texts={['Cybersecurity', 'Insights']} 
+                velocity={100} 
+                className="custom-scroll-text mb-2"
+              />
+            </h1>
             <p className="text-xl mb-12">
               Exploring the intersection of frontend development and security, with insights and best practices for building secure web applications.
             </p>

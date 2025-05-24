@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+import ScrollVelocity from '../components/reactbits/ScrollVelocity';
 
 // Project data
 const projects = [
@@ -93,7 +94,13 @@ const ProjectsPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="mb-6">Projects</h1>
+            <h1>
+              <ScrollVelocity
+                texts={['Project', 'Showcase']} 
+                velocity={100} 
+                className="custom-scroll-text mb-2"
+              />
+            </h1>
             <p className="text-xl mb-12">
               A collection of my work across frontend development, design, and cybersecurity. Each project showcases different skills and approaches to problem-solving.
             </p>

@@ -15,6 +15,7 @@ import DesignPage from './pages/DesignPage';
 import CyberSecurityPage from './pages/CyberSecurityPage';
 import ContactPage from './pages/ContactPage';
 import NotFoundPage from './pages/NotFoundPage';
+// import SplashCursor from './components/reactbits/SplashCursor';
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <CustomCursor />
+      {/* <SplashCursor /> */}
       <Header />
       <main className="min-h-screen pt-20">
         <AnimatePresence mode="wait">
