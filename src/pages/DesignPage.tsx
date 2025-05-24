@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Layout, Smartphone, Monitor, Figma } from 'lucide-react';
+import { Layout, Smartphone, Monitor, Figma } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+import TiltedCard from '../components/reactbits/TiltedCard';
 
 const designProjects = [
   {
@@ -202,13 +203,21 @@ const DesignPage = () => {
                   </div>
                 </div>
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
-                  <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow">
-                    <img 
+                    {/* <img 
                       src={project.image} 
                       alt={project.title} 
                       className="w-full h-auto hover:scale-105 transition-transform duration-500"
+                    /> */}
+                    <TiltedCard
+                      imageSrc={project.image}
+                      altText={project.title}
+                      captionText={project.title}
+                      showMobileWarning={false}
+                      showTooltip={true}
+                      displayOverlayContent={false}
+                      rotateAmplitude={14}
+                      scaleOnHover={1}
                     />
-                  </div>
                 </div>
               </motion.div>
             ))}

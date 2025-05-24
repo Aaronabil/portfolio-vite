@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Menu, X, Github, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Magnet from '../reactbits/Magnet';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,12 +51,23 @@ const Header = () => {
         scrolled ? 'bg-dark-400/95 backdrop-blur-md shadow-md' : 'bg-transparent'
       }`}
     >
+      {/* Overlay blur di bawah header, efek gradasi dan blur seperti contoh */}
+      <div
+        className={`pointer-events-none fixed left-0 top-full w-full h-16 z-40 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`}
+        style={{
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.7) 30%, rgba(0,0,0,0.0) 100%)',
+          backdropFilter: 'blur(8px)',
+          WebkitBackdropFilter: 'blur(8px)',
+        }}
+      />
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="text-white font-bold text-xl flex items-center hover:text-primary-400 transition-colors">
             <span className="font-mono mr-1"></span>
-            <span>Muhamad Nabil Faiz Amrullah</span>
+            <Magnet padding={50} disabled={false} magnetStrength={20}>
+              <span>Muhamad Nabil</span>
+            </Magnet>
             <span className="font-mono ml-1"></span>
           </NavLink>
           

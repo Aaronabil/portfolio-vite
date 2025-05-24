@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
-import { Code, Palette, Shield, Cpu, Globe, Server } from 'lucide-react';
+import { Code, Palette, Shield, Cpu} from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+import PixelTransition from '../components/reactbits/PixelTransition';
+import TrueFocus from '../components/reactbits/TrueFocus';
 
 const skills = [
   { name: 'Bootstrap', level: 90, category: 'Frontend' },
@@ -29,9 +31,17 @@ const AboutPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mb-6"
+                className="mb-6 text-6xl font-extrabold"
               >
-                About Me
+                  <TrueFocus
+                    sentence="About Me"
+                    manualMode={false}
+                    blurAmount={5}
+                    borderColor="text-primary-400"
+                    animationDuration={2}
+                    pauseBetweenAnimations={1}
+                    className="text-inherit"
+                  />
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -64,14 +74,36 @@ const AboutPage = () => {
               className="relative"
             >
               <div className="relative h-96 rounded-lg overflow-hidden border border-primary-800 animate-glow">
-                <img 
-                  src="/images/guaa.jpg" 
-                  alt="Muhamad Nabil Faiz Amrullah" 
-                  className="w-full h-full object-cover [object-position:50%_45%]"
+                <PixelTransition
+                  firstContent={
+                    <img
+                      src="/images/guaa.jpg"
+                      alt="Muhamad Nabil"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      className="w-full h-full object-cover [object-position:50%_45%]"
+                    />
+                  }
+                  secondContent={
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "grid",
+                        placeItems: "center",
+                        backgroundColor: "#111"
+                      }}
+                    >
+                      <p style={{ fontWeight: 900, fontSize: "3rem", color: "#ffffff" }}>Hover Me!</p>
+                    </div>
+                  }
+                  gridSize={20}
+                  pixelColor='#ffffff'
+                  animationStepDuration={0.6}
+                  className="custom-pixel-card"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark-500 via-transparent to-transparent"></div>
               </div>
-              <div className="absolute -bottom-6 -right-6 p-4 bg-dark-300 border border-dark-200 rounded-lg">
+              <div className="absolute -bottom-6 -right-6 p-4 bg-dark-300 border border-dark-200 rounded-lg z-50">
                 <p className="text-primary-400 font-mono">
                   <span className="text-gray-400">function</span> createExperience() {'{'}
                   <br />

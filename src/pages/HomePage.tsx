@@ -1,20 +1,41 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Shield, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ThreeScene from '../components/three/ThreeScene';
+// import ThreeScene from '../components/three/ThreeScene';
+import SplitText from '../components/reactbits/SplitText';
+// import DecryptedText from '../components/reactbits/DecryptedText';
+// import ScrollVelocity from '../components/reactbits/ScrollVelocity';
+// import Magnet from '../components/reactbits/Magnet';
+// import SplashCursor from '../components/reactbits/SplashCursor';
+import TiltedCard from '../components/reactbits/TiltedCard';
+// import Aurora from '../components/reactbits/Aurora';
+// import LiquidChrome from '../components/reactbits/LiquidChrome';
+import Squares from '../components/reactbits/Squares';
+import SpotlightCard from '../components/reactbits/SpotlightCard';
 
 // Import Shared Components
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
 
+const handleAnimationComplete = () => {
+  console.log('All letters have animated!');
+};
+
 const HomePage = () => {
   return (
     <PageTransition>
+      {/* <SplashCursor /> */}
       <div className="relative overflow-hidden">
         {/* Hero Section with 3D Model */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-10">
-            <ThreeScene />
+            <Squares 
+              speed={0.5} 
+              squareSize={30}
+              direction='down' // up, down, left, right, diagonal
+              borderColor='#38B2AC'
+              hoverFillColor='#fff'
+            />
           </div>
           
           <div className="container-custom relative z-20">
@@ -25,9 +46,29 @@ const HomePage = () => {
               className="text-center max-w-3xl mx-auto"
             >
               <h1 className="mb-6 text-white">
-                <span className="block text-lg font-medium text-primary-400 mb-2">Hi There, I'm   Muhamad Nabil Faiz Amrullah👋</span>
-                Frontend Developer
-                <span className="block text-secondary-400 mt-1">Design × Security👨‍💻</span>
+                <span className="block text-lg font-medium text-primary-400 mb-2">Hi There, I'm   Muhamad Nabil👋</span>
+                <SplitText
+                  text="Frontend Developer"
+                  className="mb-6 text-white"
+                  delay={100}
+                  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                  easing="easeOutCubic"
+                  threshold={0.2}
+                  rootMargin="-50px"
+                  onLetterAnimationComplete={handleAnimationComplete}
+                />
+                <SplitText
+                  text="Design × Security"
+                  className="block text-secondary-400 mt-1"
+                  delay={100}
+                  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                  easing="easeOutCubic"
+                  threshold={0.2}
+                  rootMargin="-50px"
+                  onLetterAnimationComplete={handleAnimationComplete}
+                />
               </h1>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Creating beautiful, secure, and intuitive digital experiences that blend creativity with technical innovation.
@@ -60,6 +101,7 @@ const HomePage = () => {
         {/* Overview Section */}
         <SectionContainer id="overview" className="py-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -67,12 +109,14 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="card p-8 hover:scale-105"
             >
-              <Code className="h-8 w-8 text-primary-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Frontend Development</h3>
-              <p>Building responsive, accessible, and performant web applications using modern frameworks and best practices.</p>
-              <Link to="/projects" className="mt-4 inline-flex items-center text-primary-400 hover:text-primary-300">
-                See projects <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 225, 255, 0.2)">
+                <Code className="h-8 w-8 text-primary-400 mb-4" />
+                <h3 className="text-xl font-bold mb-3">Frontend Development</h3>
+                <p>Building responsive, accessible, and performant web applications using modern frameworks and best practices.</p>
+                <Link to="/projects" className="mt-4 inline-flex items-center text-primary-400 hover:text-primary-300">
+                  See projects <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </SpotlightCard>
             </motion.div>
             
             <motion.div 
@@ -82,12 +126,14 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="card p-8 hover:scale-105"
             >
-              <Palette className="h-8 w-8 text-secondary-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3">UI/UX Design</h3>
-              <p>Creating intuitive and aesthetically pleasing user interfaces with a focus on the overall user experience.</p>
-              <Link to="/design" className="mt-4 inline-flex items-center text-secondary-400 hover:text-secondary-300">
-                View designs <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 225, 255, 0.2)">
+                <Palette className="h-8 w-8 text-secondary-400 mb-4" />
+                <h3 className="text-xl font-bold mb-3">UI/UX Design</h3>
+                <p>Creating intuitive and aesthetically pleasing user interfaces with a focus on the overall user experience.</p>
+                <Link to="/design" className="mt-4 inline-flex items-center text-secondary-400 hover:text-secondary-300">
+                  View designs <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </SpotlightCard>
             </motion.div>
             
             <motion.div 
@@ -97,12 +143,14 @@ const HomePage = () => {
               viewport={{ once: true }}
               className="card p-8 hover:scale-105"
             >
-              <Shield className="h-8 w-8 text-accent-400 mb-4" />
-              <h3 className="text-xl font-bold mb-3">Cybersecurity</h3>
-              <p>Implementing security best practices and protocols to create secure and resilient web applications.</p>
-              <Link to="/cybersecurity" className="mt-4 inline-flex items-center text-accent-400 hover:text-accent-300">
-                Explore insights <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 225, 255, 0.2)">
+                <Shield className="h-8 w-8 text-accent-400 mb-4" />
+                <h3 className="text-xl font-bold mb-3">Cybersecurity</h3>
+                <p>Implementing security best practices and protocols to create secure and resilient web applications.</p>
+                <Link to="/cybersecurity" className="mt-4 inline-flex items-center text-accent-400 hover:text-accent-300">
+                  Explore insights <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </SpotlightCard>
             </motion.div>
           </div>
         </SectionContainer>
@@ -139,13 +187,25 @@ const HomePage = () => {
               </Link>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow">
-                <img 
+              {/* <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow"> */}
+                {/* <img 
                   src="/images/foto.jpg" 
                   alt="SecureBank App Interface" 
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                /> */}
+                <TiltedCard
+                  imageSrc="/images/foto.jpg"
+                  altText="Cashier App Interface"
+                  captionText="Cashier App - Frontend"
+                  rotateAmplitude={12}
+                  scaleOnHover={1.1}
+                  showMobileWarning={false}
+                  showTooltip={true}
+                  displayOverlayContent={true}
+                  containerHeight="390px"
+                  containerWidth="580px"
                 />
-              </div>
+              {/* </div> */}
             </div>
           </motion.div>
         </SectionContainer>

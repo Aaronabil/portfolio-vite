@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="text-white font-bold text-xl flex items-center mb-4 hover:text-primary-400 transition-colors">
               <span className="font-mono mr-1"></span>
-              <span>Muhamad Nabil Faiz Amrullah</span>
+              <span>Muhamad Nabil</span>
               <span className="font-mono ml-1"></span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="border-t border-dark-300 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} Muhamad Nabil Faiz Amrullah. All rights reserved.
+              &copy; {currentYear} Muhamad Nabil. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
