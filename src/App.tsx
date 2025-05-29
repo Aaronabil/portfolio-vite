@@ -5,7 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 // Components
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
-import CustomCursor from './components/ui/CustomCursor';
+// import CustomCursor from './components/ui/CustomCursor';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <CustomCursor />
+      {/* <CustomCursor /> */}
       <SplashCursor />
       <Header />
       <main className="min-h-screen pt-20">

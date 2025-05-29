@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import SplitText from '../components/reactbits/SplitText';
 // import DecryptedText from '../components/reactbits/DecryptedText';
 // import ScrollVelocity from '../components/reactbits/ScrollVelocity';
-// import Magnet from '../components/reactbits/Magnet';
+import Magnet from '../components/reactbits/Magnet';
 // import SplashCursor from '../components/reactbits/SplashCursor';
 import TiltedCard from '../components/reactbits/TiltedCard';
 // import Aurora from '../components/reactbits/Aurora';
@@ -16,6 +16,7 @@ import SpotlightCard from '../components/reactbits/SpotlightCard';
 // Import Shared Components
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+// import Lanyard from '../components/reactbits/Lanyard/Lanyard';
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -74,12 +75,14 @@ const HomePage = () => {
                 Creating beautiful, secure, and intuitive digital experiences that blend creativity with technical innovation.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Link to="/projects" className="btn btn-primary">
+                  <Link to="/projects" className="btn btn-primary">
                   View Projects <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
+                <Magnet padding={50} disabled={false} magnetStrength={5}>
                 <Link to="/contact" className="btn btn-outline">
                   Get in Touch
                 </Link>
+                </Magnet>
               </div>
             </motion.div>
           </div>

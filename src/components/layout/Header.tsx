@@ -98,19 +98,19 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            
             <div className="flex items-center space-x-4">
               {socialLinks.map((link) => (
-                <a 
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
+                <Magnet key={link.label} padding={30} disabled={false} magnetStrength={20}>
+                  <a 
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-white transition-colors"
+                    aria-label={link.label}
+                  >
+                    {link.icon}
+                  </a>
+                </Magnet>
               ))}
             </div>
           </nav>

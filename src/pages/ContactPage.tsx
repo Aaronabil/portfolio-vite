@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram, CheckCircle } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
+import Lanyard from '../components/reactbits/Lanyard/Lanyard';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -150,54 +151,15 @@ const ContactPage = () => {
         </SectionContainer>
         
         {/* Contact Form */}
-        <SectionContainer id="contact-form" className="py-24 bg-dark-300">
-          <div className="mb-12">
-            <h2 className="section-heading">Send a Message</h2>
-          </div>
-          
+        <SectionContainer id="contact-form" className="py-24 bg-dark-300 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <p className="mb-6">
-                Fill out the form with your information and I'll get back to you as soon as possible. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-              
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4">What I Can Help With:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3"></span>
-                    <span>Frontend development projects</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3"></span>
-                    <span>UI/UX design services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3"></span>
-                    <span>Security assessments for web applications</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3"></span>
-                    <span>Technical consulting and advisory</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3"></span>
-                    <span>Speaking engagements and workshops</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="p-6 bg-dark-400 rounded-lg border border-dark-200">
-                <p className="text-sm text-gray-400 italic">
-                  "Nabil consistently delivered high-quality work that exceeded our expectations. His attention to detail and security-conscious approach made him an invaluable partner for our project."
-                </p>
-                <p className="mt-4 text-sm font-medium">
-                  — Timothy, Ronald Capital
-                </p>
-              </div>
+            <div className="absolute top-0 right-[25%] w-full h-full z-10 overflow-visible">
+              <Lanyard position={[0, 0, 10]} gravity={[0, -25, 0]} />
             </div>
-            
-            <div>
+            <div className="col-start-2 relative">
+              <div className="mb-8">
+                <h2 className="section-heading bg">Send a Message</h2>
+              </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
