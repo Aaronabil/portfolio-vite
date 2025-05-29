@@ -77,7 +77,7 @@ const AboutPage = () => {
                 <PixelTransition
                   firstContent={
                     <img
-                      src="/images/guaa.jpg"
+                      src="https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/guaa.jpg"
                       alt="Muhamad Nabil"
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                       className="w-full h-full object-cover [object-position:50%_45%]"

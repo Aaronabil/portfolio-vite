@@ -197,7 +197,7 @@ const HomePage = () => {
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
                 /> */}
                 <TiltedCard
-                  imageSrc="/images/foto.jpg"
+                  imageSrc="https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/foto.jpg"
                   altText="Cashier App Interface"
                   captionText="Cashier App - Frontend"
                   rotateAmplitude={12}
