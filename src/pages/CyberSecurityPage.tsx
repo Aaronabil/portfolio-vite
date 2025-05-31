@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, AlertTriangle, CheckCircle, Code, FileCode } from 'lucide-react';
+import { Shield, Lock, GlobeLock, CheckCircle, Code, FileCode, Construction, ShieldAlert } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
 import ScrollVelocity from '../components/reactbits/ScrollVelocity';
@@ -7,26 +7,28 @@ import ScrollVelocity from '../components/reactbits/ScrollVelocity';
 const securityPosts = [
   {
     id: 1,
-    title: "Common Frontend Security Vulnerabilities",
-    excerpt: "Exploring the most common security vulnerabilities in frontend applications and how to mitigate them.",
-    icon: <AlertTriangle className="h-8 w-8 text-accent-400" />,
-    readTime: "8 min read",
-    date: "June 15, 2023"
+    title: "Roadmap 5 Tahun Menjadi Penetration Tester Andal (2025–2030)",
+    excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih langkah-langkah jadi seorang Penetration Tester alias Ethical Hacker dalam waktu lima tahun ke depan.",
+    icon: <Construction className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "May 29, 2025",
+    link: "https://medium.com/@nabilmuhamad630/roadmap-5-tahun-menjadi-penetration-tester-andal-2025-2030-9e8c9b7e4157"
   },
   {
     id: 2,
-    title: "Implementing Secure Authentication",
-    excerpt: "Best practices for implementing secure authentication in web applications, from password handling to OAuth flows.",
-    icon: <Lock className="h-8 w-8 text-accent-400" />,
-    readTime: "12 min read",
-    date: "August 22, 2023"
+    title: "Belajar Jaringan dari Nol: Routing & IP Dasar Pakai Cisco Packet Tracer",
+    excerpt: "Di artikel ini, aku bakal ngajak kalian belajar bareng tentang dasar-dasar jaringan komputer — mulai dari bikin topologi, ngatur IP, sampai nyoba routing dasar pakai Cisco Packet Tracer.",
+    icon: <GlobeLock className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "May 29, 2025",
+    link: "https://medium.com/@nabilmuhamad630/belajar-jaringan-dari-nol-routing-ip-dasar-pakai-cisco-packet-tracer-7e15efc94fa4"
   },
   {
     id: 3,
-    title: "XSS Prevention for React Developers",
-    excerpt: "A comprehensive guide to understanding and preventing cross-site scripting (XSS) vulnerabilities in React applications.",
-    icon: <Code className="h-8 w-8 text-accent-400" />,
-    readTime: "10 min read",
+    title: "Laporan Insiden Keamanan: Deteksi dan Analisis Awal Infeksi Malware Win32/Koi Stealer",
+    excerpt: "Coming Soon.",
+    icon: <ShieldAlert className="h-8 w-8 text-accent-400" />,
+    readTime: "-",
     date: "October 5, 2023"
   },
   {
@@ -234,7 +236,7 @@ const CyberSecurityPage = () => {
                     </div>
                     <h3 className="text-xl font-bold mb-2">{post.title}</h3>
                     <p className="text-gray-400 mb-4">{post.excerpt}</p>
-                    <a href="#" className="text-accent-400 hover:text-accent-300 inline-flex items-center">
+                    <a href={post.link} target="_blank" className="text-accent-400 hover:text-accent-300 inline-flex items-center">
                       Read more <span className="ml-1">→</span>
                     </a>
                   </div>

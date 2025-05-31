@@ -246,7 +246,7 @@ const AboutPage = () => {
                 </span>
               </div>
               <h3 className="text-xl font-bold mb-2">Frontend Developer</h3>
-              <p className="text-gray-400 mb-2">SMPN 2 KUNIGAN, Kuningan</p>
+              <p className="text-gray-400 mb-2">SMPN 2 KUNINGAN, Kuningan</p>
               <p className="mb-4">
                Lead frontend development for library applications, with a focus on security-conscious UI/UX design and implementation.
               </p>
