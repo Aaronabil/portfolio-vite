@@ -26,18 +26,19 @@ const securityPosts = [
   {
     id: 3,
     title: "Laporan Insiden Keamanan: Deteksi dan Analisis Awal Infeksi Malware Win32/Koi Stealer",
-    excerpt: "Coming Soon.",
+    excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih proses analisis insiden malware itu dilakukan di dunia nyata, khususnya saat menghadapi infeksi malware Win32/Koi Stealer, sebuah jenis malware pencuri informasi alias info stealer.",
     icon: <ShieldAlert className="h-8 w-8 text-accent-400" />,
-    readTime: "-",
-    date: "October 5, 2023"
+    readTime: "7 min read",
+    date: "June 1, 2025",
+    link: "https://medium.com/@nabilmuhamad630/deteksi-dan-analisis-awal-infeksi-malware-win32-koi-stealer-a70f20dad0db"
   },
   {
     id: 4,
-    title: "Secure API Communication Patterns",
-    excerpt: "Techniques and best practices for securing API communication in your frontend applications.",
+    title: "Coming soon",
+    excerpt: "See you in 2 days.",
     icon: <FileCode className="h-8 w-8 text-accent-400" />,
-    readTime: "7 min read",
-    date: "December 12, 2023"
+    readTime: "-",
+    date: "Coming soon in 2 days"
   }
 ];
 
