@@ -50,23 +50,27 @@ const HomePage = () => {
                 <span className="block text-lg font-medium text-primary-400 mb-2">Hi There, I'm   Muhamad Nabil👋</span>
                 <SplitText
                   text="Frontend Developer"
-                  className="mb-6 text-white"
-                  delay={100}
-                  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                  easing="easeOutCubic"
-                  threshold={0.2}
+                  className="mb-2 text-white"
+                  delay={50}
+                  duration={2}
+                  ease="elastic.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
                   rootMargin="-50px"
                   onLetterAnimationComplete={handleAnimationComplete}
                 />
                 <SplitText
                   text="Design × Security"
-                  className="block text-secondary-400 mt-1"
-                  delay={100}
-                  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                  easing="easeOutCubic"
-                  threshold={0.2}
+                  className="block text-secondary-400 mt-0"
+                  delay={50}
+                  duration={2}
+                  ease="elastic.out"
+                  splitType="chars"
+                  from={{ opacity: 0, y: 40 }}
+                  to={{ opacity: 1, y: 0 }}
+                  threshold={0.1}
                   rootMargin="-50px"
                   onLetterAnimationComplete={handleAnimationComplete}
                 />

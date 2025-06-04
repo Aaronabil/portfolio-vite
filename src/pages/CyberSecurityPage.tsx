@@ -1,13 +1,15 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, GlobeLock, CheckCircle, Code, FileCode, Construction, ShieldAlert } from 'lucide-react';
+import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, Footprints } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
 import ScrollVelocity from '../components/reactbits/ScrollVelocity';
+import Magnet from '../components/reactbits/Magnet';
+import { useState } from 'react';
 
 const securityPosts = [
   {
     id: 1,
-    title: "Roadmap 5 Tahun Menjadi Penetration Tester Andal (2025–2030)",
+    title: "Roadmap 5 Tahun Menjadi Penetration Tester Andal (2025–2030).",
     excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih langkah-langkah jadi seorang Penetration Tester alias Ethical Hacker dalam waktu lima tahun ke depan.",
     icon: <Construction className="h-8 w-8 text-accent-400" />,
     readTime: "3 min read",
@@ -16,7 +18,7 @@ const securityPosts = [
   },
   {
     id: 2,
-    title: "Belajar Jaringan dari Nol: Routing & IP Dasar Pakai Cisco Packet Tracer",
+    title: "Belajar Jaringan dari Nol: Routing & IP Dasar Pakai Cisco Packet Tracer.",
     excerpt: "Di artikel ini, aku bakal ngajak kalian belajar bareng tentang dasar-dasar jaringan komputer — mulai dari bikin topologi, ngatur IP, sampai nyoba routing dasar pakai Cisco Packet Tracer.",
     icon: <GlobeLock className="h-8 w-8 text-accent-400" />,
     readTime: "3 min read",
@@ -25,7 +27,7 @@ const securityPosts = [
   },
   {
     id: 3,
-    title: "Laporan Insiden Keamanan: Deteksi dan Analisis Awal Infeksi Malware Win32/Koi Stealer",
+    title: "Laporan Insiden Keamanan: Deteksi dan Analisis Awal Infeksi Malware Win32/Koi Stealer.",
     excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih proses analisis insiden malware itu dilakukan di dunia nyata, khususnya saat menghadapi infeksi malware Win32/Koi Stealer, sebuah jenis malware pencuri informasi alias info stealer.",
     icon: <ShieldAlert className="h-8 w-8 text-accent-400" />,
     readTime: "7 min read",
@@ -34,11 +36,30 @@ const securityPosts = [
   },
   {
     id: 4,
-    title: "Coming soon",
-    excerpt: "See you in 2 days.",
+    title: "Keamanan Sistem ICS/SCADA: Kenapa Penting & Apa Saja Tantangannya?.",
+    excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih pentingnya menjaga keamanan sistem ICS/SCADA — sistem yang jadi “otak” dan “jantung” berbagai infrastruktur penting kayak listrik, air, dan industri.",
     icon: <FileCode className="h-8 w-8 text-accent-400" />,
-    readTime: "-",
-    date: "Coming soon in 2 days"
+    readTime: "3 min read",
+    date: "June 3, 2025",
+    link: "https://medium.com/@nabilmuhamad630/keamanan-sistem-ics-scada-kenapa-penting-apa-saja-tantangannya-9511a162048e"
+  },
+  {
+    id: 5,
+    title: "Analisis Mendalam Keamanan Sistem ICS atau SCADA.",
+    excerpt: "Ini adalah analisis mendalam tentang ICS/SCADA dan serangan yang ada pada ICS/SCADA.",
+    icon: <ClipboardMinus className="h-8 w-8 text-accent-400" />,
+    readTime: "20-30 min read",
+    date: "June 3, 2025",
+    link: "https://drive.google.com/file/d/18vtfc8yLixPElKBXlcqV8e2UrcTXDakD/view?usp=drive_link"
+  },
+  {
+    id: 6,
+    title: "Dokumentasi Hardening Di Kali Linux.",
+    excerpt: "Coming Soon.",
+    icon: <Footprints className="h-8 w-8 text-accent-400" />,
+    readTime: "- min read",
+    date: "June x, 2025",
+    link: ""
   }
 ];
 
@@ -66,6 +87,10 @@ const securityPractices = [
 ];
 
 const CyberSecurityPage = () => {
+  const [showAllPosts, setShowAllPosts] = useState(false);
+
+  const visiblePosts = showAllPosts ? securityPosts : securityPosts.slice(0, 4);
+
   return (
     <PageTransition>
       <div className="pt-16">
@@ -216,7 +241,7 @@ const CyberSecurityPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityPosts.map((post, index) => (
+            {visiblePosts.map((post, index) => (
               <motion.div
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -245,6 +270,18 @@ const CyberSecurityPage = () => {
               </motion.div>
             ))}
           </div>
+
+          {!showAllPosts && (
+            <div className="text-center mt-12">
+              <Magnet padding={50} disabled={false} magnetStrength={5}>
+                <button
+                  onClick={() => setShowAllPosts(true)}
+                  className="btn btn-outline text-accent-400 border-accent-400 hover:bg-accent-400 hover:text-white">
+                  Show More
+                </button>
+              </Magnet>
+            </div>
+          )}
         </SectionContainer>
         
         {/* CTA Section */}
