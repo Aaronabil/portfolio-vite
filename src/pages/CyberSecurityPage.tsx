@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, Footprints } from 'lucide-react';
+import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench } from 'lucide-react';
 import PageTransition from '../components/shared/PageTransition';
 import SectionContainer from '../components/shared/SectionContainer';
 import ScrollVelocity from '../components/reactbits/ScrollVelocity';
@@ -13,7 +13,7 @@ const securityPosts = [
     excerpt: "Di artikel ini, aku bakal ngajak kalian ngelihat bareng-bareng gimana sih langkah-langkah jadi seorang Penetration Tester alias Ethical Hacker dalam waktu lima tahun ke depan.",
     icon: <Construction className="h-8 w-8 text-accent-400" />,
     readTime: "3 min read",
-    date: "May 29, 2025",
+    date: "May 28, 2025",
     link: "https://medium.com/@nabilmuhamad630/roadmap-5-tahun-menjadi-penetration-tester-andal-2025-2030-9e8c9b7e4157"
   },
   {
@@ -22,7 +22,7 @@ const securityPosts = [
     excerpt: "Di artikel ini, aku bakal ngajak kalian belajar bareng tentang dasar-dasar jaringan komputer — mulai dari bikin topologi, ngatur IP, sampai nyoba routing dasar pakai Cisco Packet Tracer.",
     icon: <GlobeLock className="h-8 w-8 text-accent-400" />,
     readTime: "3 min read",
-    date: "May 29, 2025",
+    date: "May 28, 2025",
     link: "https://medium.com/@nabilmuhamad630/belajar-jaringan-dari-nol-routing-ip-dasar-pakai-cisco-packet-tracer-7e15efc94fa4"
   },
   {
@@ -54,12 +54,21 @@ const securityPosts = [
   },
   {
     id: 6,
-    title: "Dokumentasi Hardening Di Kali Linux.",
-    excerpt: "Coming Soon.",
-    icon: <Footprints className="h-8 w-8 text-accent-400" />,
-    readTime: "- min read",
-    date: "June x, 2025",
-    link: ""
+    title: "Mengamankan SSH Kali Linux dengan 2FA Google Authenticator.",
+    excerpt: "Di artikel ini, aku bakal ngajak kalian belajar bareng tentang gimana caranya mengamankan akses SSH di Kali Linux dengan sistem autentikasi dua faktor (2FA) menggunakan Google Authenticator.",
+    icon: <LockKeyhole className="h-8 w-8 text-accent-400" />,
+    readTime: "2 min read",
+    date: "June 5, 2025",
+    link: "https://medium.com/@nabilmuhamad630/mengamankan-ssh-kali-linux-dengan-2fa-google-authenticator-9ece09449c8c"
+  },
+  {
+    id: 7,
+    title: "Tools Brute Force Custom HTTP Header.",
+    excerpt: "Simulasi brute force terhadap custom HTTP header — berguna untuk edukasi keamanan API dan pengujian keamanan berbasis token. Cocok untuk memahami risiko apabila developer menyimpan otentikasi dalam header tanpa validasi ketat.",
+    icon: <Wrench className="h-8 w-8 text-accent-400" />,
+    readTime: "",
+    date: "June 7, 2025",
+    link: "https://github.com/Aaronabil/header-brute-force-simulator"
   }
 ];
 
