@@ -235,6 +235,32 @@ const AboutPage = () => {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              className="relative pl-8 border-l-2 border-accent-700"
+            >
+              <div className="absolute -left-2.5 top-0">
+                <div className="w-5 h-5 bg-accent-500 rounded-full"></div>
+              </div>
+              <div className="mb-2">
+                <span className="inline-block px-3 py-1 bg-dark-300 text-accent-400 rounded-full text-sm">
+                  2025
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Cyber Security</h3>
+              <p className="text-gray-400 mb-2">IDN Networks, Jakarta</p>
+              <p className="mb-4">
+               Bootcamp participation.
+              </p>
+              <ul className="flex flex-wrap gap-2">
+                <li className="px-3 py-1 bg-dark-300 rounded-full text-sm">Wireshark</li>
+                <li className="px-3 py-1 bg-dark-300 rounded-full text-sm">Nmap</li>
+              </ul>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
               className="relative pl-8 border-l-2 border-primary-700"
             >
               <div className="absolute -left-2.5 top-0">

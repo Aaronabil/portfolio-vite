@@ -109,7 +109,7 @@ const ContactPage = () => {
                 <MapPin className="h-6 w-6 text-accent-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Location</h3>
-              <p className="text-gray-400 mb-4">Tangerang, Banten</p>
+              <p className="text-gray-400 mb-4">Banten, Indonesia</p>
               <p className="text-accent-400">
                 Available for remote work worldwide
               </p>

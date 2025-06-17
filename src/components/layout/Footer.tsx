@@ -82,7 +82,7 @@ const Footer = () => {
                   +62 888-9465-561
                 </a>
               </li>
-              <li>Tangerang, Banten</li>
+              <li>Banten, Indonesia</li>
             </ul>
           </div>
         </div>
