@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Layout, Smartphone, Monitor, Figma } from 'lucide-react';
-import PageTransition from '../components/shared/PageTransition';
-import SectionContainer from '../components/shared/SectionContainer';
-import TiltedCard from '../components/reactbits/TiltedCard';
-import ScrollVelocity from '../components/reactbits/ScrollVelocity';
+import PageTransition from '@/components/shared/PageTransition';
+import SectionContainer from '@/components/shared/SectionContainer';
+import TiltedCard from '@/components/reactbits/TiltedCard';
+import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
 
 const designProjects = [
   {
@@ -194,7 +194,7 @@ const DesignPage = () => {
                       href={project.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn btn-secondary"
+                      className="btn btn-secondary rounded-full"
                     >
                       View Case Study
                     </a>
@@ -202,7 +202,7 @@ const DesignPage = () => {
                       href={project.figmaLink} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="btn btn-outline inline-flex items-center"
+                      className="btn btn-outline rounded-full inline-flex items-center"
                     >
                       <Figma className="mr-2 h-4 w-4" />
                       Figma File

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Instagram, CheckCircle } from 'lucide-react';
-import PageTransition from '../components/shared/PageTransition';
-import SectionContainer from '../components/shared/SectionContainer';
-import Lanyard from '../components/reactbits/Lanyard/Lanyard';
+import PageTransition from '@/components/shared/PageTransition';
+import SectionContainer from '@/components/shared/SectionContainer';
+import Lanyard from '@/components/reactbits/Lanyard/Lanyard';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

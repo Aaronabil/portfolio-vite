@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench } from 'lucide-react';
-import PageTransition from '../components/shared/PageTransition';
-import SectionContainer from '../components/shared/SectionContainer';
-import ScrollVelocity from '../components/reactbits/ScrollVelocity';
-import Magnet from '../components/reactbits/Magnet';
+import PageTransition from '@/components/shared/PageTransition';
+import SectionContainer from '@/components/shared/SectionContainer';
+import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
+import Magnet from '@/components/reactbits/Magnet';
 import { useState } from 'react';
 
 const securityPosts = [
@@ -285,7 +285,7 @@ const CyberSecurityPage = () => {
               <Magnet padding={50} disabled={false} magnetStrength={5}>
                 <button
                   onClick={() => setShowAllPosts(true)}
-                  className="btn btn-outline text-accent-400 border-accent-400 hover:bg-accent-400 hover:text-white">
+                  className="btn btn-outline rounded-full text-accent-400 border-accent-400 hover:bg-accent-400 hover:text-white">
                   Show More
                 </button>
               </Magnet>
@@ -307,10 +307,10 @@ const CyberSecurityPage = () => {
               I offer security assessments for frontend applications, helping identify and address potential vulnerabilities before they become problems.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="btn btn-primary">
+              <a href="/contact" className="btn btn-primary rounded-full">
                 Get in Touch
               </a>
-              <a href="#" className="btn btn-outline">
+              <a href="#" className="btn btn-outline rounded-full">
                 Learn More
               </a>
             </div>

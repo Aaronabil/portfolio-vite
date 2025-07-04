@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
-import PageTransition from '../components/shared/PageTransition';
-import SectionContainer from '../components/shared/SectionContainer';
-import ScrollVelocity from '../components/reactbits/ScrollVelocity';
+import PageTransition from '@/components/shared/PageTransition';
+import SectionContainer from '@/components/shared/SectionContainer';
+import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
 
 // Project data
 const projects = [
@@ -66,6 +66,16 @@ const projects = [
     github: "https://github.com/Aaronabil/predict-number-py",
     categories: ["Security"],
     technologies: ["Python"]
+  },
+  {
+    id: 7,
+    title: "Crypto App",
+    description: "A crypto application that contains crypto trend charts, the latest news, and wallet demos.",
+    image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/crypto.png",
+    link: "#",
+    github: "https://github.com/Aaronabil/project-crypto",
+    categories: ["Frontend","Design", "Security"],
+    technologies: ["Typescript", "React", "Vite", "Tailwind CSS"]
   }
 ];
 
@@ -213,7 +223,7 @@ const ProjectsPage = () => {
               href="https://github.com/aaronabil" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn btn-outline inline-flex items-center"
+              className="btn btn-outline rounded-full inline-flex items-center"
             >
               <Github className="mr-2 h-5 w-5" />
               Visit GitHub Profile

@@ -1,22 +1,24 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Shield, Palette } from 'lucide-react';
 import { Link } from 'react-router-dom';
-// import ThreeScene from '../components/three/ThreeScene';
-import SplitText from '../components/reactbits/SplitText';
-// import DecryptedText from '../components/reactbits/DecryptedText';
-// import ScrollVelocity from '../components/reactbits/ScrollVelocity';
-import Magnet from '../components/reactbits/Magnet';
-// import SplashCursor from '../components/reactbits/SplashCursor';
-import TiltedCard from '../components/reactbits/TiltedCard';
-// import Aurora from '../components/reactbits/Aurora';
-// import LiquidChrome from '../components/reactbits/LiquidChrome';
-import Squares from '../components/reactbits/Squares';
-import SpotlightCard from '../components/reactbits/SpotlightCard';
+// import ThreeScene from '@/components/three/ThreeScene';
+import SplitText from '@/components/reactbits/SplitText';
+// import DecryptedText from '@/components/reactbits/DecryptedText';
+// import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
+import Magnet from '@/components/reactbits/Magnet';
+// import SplashCursor from '@/components/reactbits/SplashCursor';
+import TiltedCard from '@/components/reactbits/TiltedCard';
+// import Aurora from '@/components/reactbits/Aurora';
+// import LiquidChrome from '@/components/reactbits/LiquidChrome';
+import Squares from '@/components/reactbits/Squares';
+import SpotlightCard from '@/components/reactbits/SpotlightCard';
 
 // Import Shared Components
-import PageTransition from '../components/shared/PageTransition';
-import SectionContainer from '../components/shared/SectionContainer';
-// import Lanyard from '../components/reactbits/Lanyard/Lanyard';
+import PageTransition from '@/components/shared/PageTransition';
+import SectionContainer from '@/components/shared/SectionContainer';
+// import Lanyard from '@/components/reactbits/Lanyard/Lanyard';
+import { InteractiveHoverButton } from "@/components/magicui/Interactivebutton";
+import { ShimmerButton } from "@/components/magicui/Shimmerbutton";
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -79,11 +81,15 @@ const HomePage = () => {
                 Creating beautiful, secure, and intuitive digital experiences that blend creativity with technical innovation.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                  <Link to="/projects" className="btn btn-primary">
-                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                <Link to="/projects">
+                  <ShimmerButton className="shadow-2xl w-fit px-5 py-1">
+                    <span className="whitespace-pre-wrap text-center text-sm  leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                    View Projects
+                    </span>
+                  </ShimmerButton>
                 </Link>
                 <Magnet padding={50} disabled={false} magnetStrength={5}>
-                <Link to="/contact" className="btn btn-outline">
+                <Link to="/contact" className="btn btn-outline rounded-full">
                   Get in Touch
                 </Link>
                 </Magnet>
@@ -189,8 +195,10 @@ const HomePage = () => {
                 <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Bootstrap</li>
                 <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Security Audit</li>
               </ul>
-              <Link to="/projects" className="btn btn-primary">
+              <Link to="/projects">
+              <InteractiveHoverButton>
                 View Project Details
+              </InteractiveHoverButton>
               </Link>
             </div>
             <div className="order-1 lg:order-2">
@@ -230,8 +238,10 @@ const HomePage = () => {
             <p className="text-xl mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
-            <Link to="/contact" className="btn btn-primary text-lg px-8 py-3">
-              Let's Connect
+            <Link to="/contact">
+              <InteractiveHoverButton>
+                Lets Connect
+              </InteractiveHoverButton>
             </Link>
           </motion.div>
         </SectionContainer>
