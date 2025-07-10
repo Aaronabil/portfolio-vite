@@ -164,18 +164,20 @@ const AboutPage = () => {
 
         {/* Skills Section */}
         <SectionContainer id="skills" className="py-24 bg-dark-300">
-          <div className="mb-12">
             <h2 className="section-heading">Skills & Expertise</h2>
-            <Marquee pauseOnHover className="[--duration:35s] flex gap-4">
-              {skills.map((skill, idx) => (
-                <SkillBadge key={skill.name + idx} name={skill.name} img={skill.img} />
-              ))}
-            </Marquee>
-            <Marquee reverse pauseOnHover className="[--duration:35s] flex gap-4">
-              {skills.map((skill, idx) => (
-                <SkillBadge key={skill.name + idx} name={skill.name} img={skill.img} />
-              ))}
-            </Marquee>
+            <div className="relative overflow-hidden mb-12">
+              <Marquee pauseOnHover className="[--duration:35s] flex gap-4">
+                {skills.map((skill, idx) => (
+                  <SkillBadge key={skill.name + idx} name={skill.name} img={skill.img} />
+                ))}
+              </Marquee>
+              <Marquee reverse pauseOnHover className="[--duration:35s] flex gap-4">
+                {skills.map((skill, idx) => (
+                  <SkillBadge key={skill.name + idx} name={skill.name} img={skill.img} />
+                ))}
+              </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#181925] to-transparent"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#181925] to-transparent"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

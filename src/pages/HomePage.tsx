@@ -7,7 +7,7 @@ import SplitText from '@/components/reactbits/SplitText';
 // import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
 import Magnet from '@/components/reactbits/Magnet';
 // import SplashCursor from '@/components/reactbits/SplashCursor';
-import TiltedCard from '@/components/reactbits/TiltedCard';
+// import TiltedCard from '@/components/reactbits/TiltedCard';
 // import Aurora from '@/components/reactbits/Aurora';
 // import LiquidChrome from '@/components/reactbits/LiquidChrome';
 import Squares from '@/components/reactbits/Squares';
@@ -19,6 +19,8 @@ import SectionContainer from '@/components/shared/SectionContainer';
 // import Lanyard from '@/components/reactbits/Lanyard/Lanyard';
 import { InteractiveHoverButton } from "@/components/magicui/Interactivebutton";
 import { ShimmerButton } from "@/components/magicui/Shimmerbutton";
+import ModelViewer from '@/components/reactbits/ModelViewer';
+// import CurvedLoop from '@/components/reactbits/CurverdLoop';
 
 const handleAnimationComplete = () => {
   console.log('All letters have animated!');
@@ -32,17 +34,17 @@ const HomePage = () => {
         {/* Hero Section with 3D Model */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-10">
-            <Squares 
-              speed={0.5} 
+            <Squares
+              speed={0.5}
               squareSize={30}
               direction='down' // up, down, left, right, diagonal
               borderColor='#38B2AC'
               hoverFillColor='#fff'
             />
           </div>
-          
+
           <div className="container-custom relative z-20">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -84,19 +86,19 @@ const HomePage = () => {
                 <Link to="/projects">
                   <ShimmerButton className="shadow-2xl w-fit px-5 py-1">
                     <span className="whitespace-pre-wrap text-center text-sm  leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                    View Projects
+                      View Projects
                     </span>
                   </ShimmerButton>
                 </Link>
                 <Magnet padding={50} disabled={false} magnetStrength={5}>
-                <Link to="/contact" className="btn btn-outline rounded-full">
-                  Get in Touch
-                </Link>
+                  <Link to="/contact" className="btn btn-outline rounded-full">
+                    Get in Touch
+                  </Link>
                 </Magnet>
               </div>
             </motion.div>
           </div>
-          
+
           <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20">
             <motion.div
               initial={{ opacity: 0 }}
@@ -110,12 +112,12 @@ const HomePage = () => {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Overview Section */}
         <SectionContainer id="overview" className="py-24">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -131,8 +133,8 @@ const HomePage = () => {
                 </Link>
               </SpotlightCard>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -148,8 +150,8 @@ const HomePage = () => {
                 </Link>
               </SpotlightCard>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -167,67 +169,37 @@ const HomePage = () => {
             </motion.div>
           </div>
         </SectionContainer>
-        
+
         {/* Featured Project Section */}
         <SectionContainer id="featured" className="py-24 bg-dark-300">
-          <div className="mb-12">
-            <h2 className="section-heading">Featured Project</h2>
-          </div>
-          
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-          >
-            <div className="order-2 lg:order-1">
-              <span className="inline-block px-3 py-1 bg-dark-200 text-primary-400 rounded-full text-sm mb-4">
-                Frontend Development & Design
-              </span>
-              <h3 className="text-2xl font-bold mb-4">Cashier App Interface</h3>
-              <p className="mb-6">
-                An application for Madura stalls that is simple, light and minimalist with a fresh design touch.
-              </p>
-              <ul className="flex flex-wrap gap-2 mb-6">
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">CodeIgniter</li>
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">PHP</li>
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Bootstrap</li>
-                <li className="px-3 py-1 bg-dark-200 rounded-full text-sm">Security Audit</li>
-              </ul>
-              <Link to="/projects">
-              <InteractiveHoverButton>
-                View Project Details
-              </InteractiveHoverButton>
-              </Link>
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0 overflow-x-auto mt-2">
+            <div className="flex-1 flex items-center justify-center md:justify-start mb-10 md:mb-0 relative z-20">
+              <h2 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-[0_2px_16px_rgba(255,255,255,0.8)] text-center md:text-left relative z-30">
+                So Cool Right.
+              </h2>
             </div>
-            <div className="order-1 lg:order-2">
-              {/* <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow"> */}
-                {/* <img 
-                  src="/images/foto.jpg" 
-                  alt="SecureBank App Interface" 
-                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
-                /> */}
-                <TiltedCard
-                  imageSrc="https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/foto.jpg"
-                  altText="Cashier App Interface"
-                  captionText="Cashier App - Frontend"
-                  rotateAmplitude={12}
-                  scaleOnHover={1.1}
-                  showMobileWarning={false}
-                  showTooltip={true}
-                  displayOverlayContent={true}
-                  containerHeight="390px"
-                  containerWidth="580px"
+            <div className="flex-1 flex items-center justify-center relative z-10 max-w-full">
+              <div className="w-full max-w-[700px] h-auto flex items-center justify-center relative overflow-hidden">
+                <ModelViewer
+                  url="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/ToyCar/glTF-Binary/ToyCar.glb"
+                  width={800}
+                  height={500}
+                  autoRotate={true}
+                  enableMouseParallax={false}
+                  fadeIn={true}
                 />
-              {/* </div> */}
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#181925] to-transparent"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#181925] to-transparent"></div>
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-[#181925] to-transparent"></div>
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#181925] to-transparent"></div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </SectionContainer>
-        
+
         {/* Call to Action */}
         <SectionContainer id="cta" className="py-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}

@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench } from 'lucide-react';
+import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench, Wallet, Bug } from 'lucide-react';
 import PageTransition from '@/components/shared/PageTransition';
 import SectionContainer from '@/components/shared/SectionContainer';
 import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
 import Magnet from '@/components/reactbits/Magnet';
 import { useState } from 'react';
+import { Marquee } from "@/components/magicui/Marquee";
 
 const securityPosts = [
   {
@@ -69,7 +70,53 @@ const securityPosts = [
     readTime: "",
     date: "June 7, 2025",
     link: "https://github.com/Aaronabil/header-brute-force-simulator"
-  }
+  },
+  {
+    id: 8,
+    title: "ECC & Web3 Cryptography: Superpower Baru di Dunia Siber.",
+    excerpt: "Di artikel ini, aku mau ajak kalian ngulik bareng soal dunia kriptografi yang makin seru — khususnya ECC (Elliptic Curve Cryptography) dan Web3 Cryptography.",
+    icon: <Wallet className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "June 9, 2025",
+    link: "https://medium.com/@nabilmuhamad630/ecc-web3-cryptography-superpower-baru-di-dunia-siber-6be384163dfa"
+  },
+  {
+    id: 9,
+    title: "Web Aplication Penetration Tets Report: DVWA.",
+    excerpt: "Sebagai bagian dari perjalanan belajar saya di bootcamp cybersecurity ID-Networkers (IDN.ID), saya berkesempatan untuk melakukan uji penetrasi aplikasi web secara penuh.",
+    icon: <Bug className="h-8 w-8 text-accent-400" />,
+    readTime: "7 min read",
+    date: "June 23, 2025",
+    link: "hhttps://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_report-dvwa-activity-7343502600203378689-ve4Z?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+  {
+    id: 10,
+    title: "Security Assessment Report: DVAPI (Dockerized Vulnerable API).",
+    excerpt: "Selanjutnya saya melakukan pengujian keamanan API (API Security Testing) dari ID-Networkers (IDN.ID). Laporan ini adalah hasil dari lab API Security Testing saya.",
+    icon: <Bug className="h-8 w-8 text-accent-400" />,
+    readTime: "10 min read",
+    date: "June 25, 2025",
+    link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_report-lab-api-security-testing-activity-7343873101207625728-M7s3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+  {
+    id: 11,
+    title: "Penetration Testing on Metasploitable2 Vulnerable VM.",
+    excerpt: "Selanjutnya saya melakukan pengujian penetrasi (penetration testing) terhadap VM Metasploitable2 sebagai bagian dari tugas praktikum di program pelatihan dari ID-Networkers (IDN.ID).",
+    icon: <Bug className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "June 27, 2025",
+    link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_report-metasploitable2-activity-7344582455086981122-3Xsy?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+  {
+    id: 12,
+    title: "Mobile Application Penetration Testing Report: InsecureBankv2.",
+    excerpt: "Terakhir saya melakukan pengujian penetrasi (penetration testing) terhadap aplikasi Android InsecureBankv2, sebagai bagian dari tugas praktikum dalam program pelatihan Cyber Security di ID-Networkers (IDN.ID).",
+    icon: <Bug className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "June 28, 2025",
+    link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_report-pentest-mobile-activity-7344944122614452224-19pp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+
 ];
 
 const securityPractices = [
@@ -97,8 +144,18 @@ const securityPractices = [
 
 const CyberSecurityPage = () => {
   const [showAllPosts, setShowAllPosts] = useState(false);
-
   const visiblePosts = showAllPosts ? securityPosts : securityPosts.slice(0, 4);
+
+  const IframeBadge = () => (
+    <iframe
+    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5159881"
+    className="h-[88px] w-[340px] max-w-none rounded-md border-none object-contain mt-8"
+    scrolling="no"
+    allowTransparency={true}
+  />
+  );
+  
+  // const badges = Array(6).fill(0);
 
   return (
     <PageTransition>
@@ -111,13 +168,66 @@ const CyberSecurityPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1>
-              <ScrollVelocity
-                texts={['Cybersecurity', 'Insights']} 
-                velocity={100} 
-                className="custom-scroll-text mb-2"
-              />
-            </h1>
+            <div className="relative overflow-hidden">
+              <h1>
+                <ScrollVelocity
+                  texts={['Cybersecurity', 'Insights']} 
+                  velocity={100} 
+                  className="custom-scroll-text mb-2"
+                />
+              </h1>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-dark-400 to-transparent"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-dark-400 to-transparent"></div>
+            </div>
+            {/* <div className="relative my-8 flex h-[450px] w-full flex-row items-center justify-center overflow-hidden [perspective:1000px]">
+  
+  
+  <div 
+    className="flex flex-row items-center gap-4"
+    style={{
+      transform: "translateX(-100px) translateY(0px) translateZ(-100px) rotateX(20deg) rotateY(-15deg) rotateZ(0deg)",
+    }}
+  >
+
+    <Marquee pauseOnHover vertical className="[--duration:20s]">
+      {badges.map((_, i) => (
+        <div key={`c1-${i}`} className="py-2">
+          <IframeBadge />
+        </div>
+      ))}
+    </Marquee>
+
+    <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+      {badges.map((_, i) => (
+        <div key={`c2-${i}`} className="py-2">
+          <IframeBadge />
+        </div>
+      ))}
+    </Marquee>
+
+    <Marquee pauseOnHover vertical className="[--duration:20s]">
+      {badges.map((_, i) => (
+        <div key={`c3-${i}`} className="py-2">
+          <IframeBadge />
+        </div>
+      ))}
+    </Marquee>
+    
+    <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+      {badges.map((_, i) => (
+        <div key={`c4-${i}`} className="py-2">
+          <IframeBadge />
+        </div>
+      ))}
+    </Marquee>
+  </div>
+
+
+  <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
+  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
+  <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+  <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+</div> */}
             <p className="text-xl mb-12">
               Exploring the intersection of frontend development and security, with insights and best practices for building secure web applications.
             </p>
@@ -291,6 +401,14 @@ const CyberSecurityPage = () => {
               </Magnet>
             </div>
           )}
+          <div className="relative overflow-hidden mt-8">
+          <Marquee className="[--duration:35s]">
+            <IframeBadge />
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#181925] to-transparent"></div>
+  <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#181925] to-transparent"></div>
+          </div>
+          
         </SectionContainer>
         
         {/* CTA Section */}

@@ -14,7 +14,7 @@ const projects = [
     image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/kasir.jpg",
     link: "#",
     github: "https://github.com/Aaronabil/kasir-visual",
-    categories: ["Frontend","Design", "Security"],
+    categories: ["Frontend", "Design", "Security"],
     technologies: ["CodeIgniter", "PHP", "Bootstrap", "Security Audit"]
   },
   {
@@ -74,18 +74,18 @@ const projects = [
     image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/crypto.png",
     link: "#",
     github: "https://github.com/Aaronabil/project-crypto",
-    categories: ["Frontend","Design", "Security"],
+    categories: ["Frontend", "Design", "Security"],
     technologies: ["Typescript", "React", "Vite", "Tailwind CSS"]
   }
 ];
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState('all');
-  
-  const filteredProjects = filter === 'all' 
-    ? projects 
+
+  const filteredProjects = filter === 'all'
+    ? projects
     : projects.filter(project => project.categories.includes(filter));
-  
+
   const categories = [
     { label: 'All Projects', value: 'all' },
     { label: 'Frontend', value: 'Frontend' },
@@ -98,34 +98,37 @@ const ProjectsPage = () => {
       <div className="pt-16">
         {/* Header */}
         <SectionContainer id="projects-header" className="py-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1>
-              <ScrollVelocity
-                texts={['Project', 'Showcase']} 
-                velocity={100} 
-                className="custom-scroll-text mb-2"
-              />
-            </h1>
+            <div className="relative overflow-hidden">
+              <h1>
+                <ScrollVelocity
+                  texts={['Project', 'Showcase']}
+                  velocity={100}
+                  className="custom-scroll-text mb-2"
+                />
+              </h1>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-dark-400 to-transparent"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-dark-400 to-transparent"></div>
+            </div>
             <p className="text-xl mb-12">
               A collection of my work across frontend development, design, and cybersecurity. Each project showcases different skills and approaches to problem-solving.
             </p>
-            
+
             {/* Filter Tabs */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map(category => (
                 <button
                   key={category.value}
                   onClick={() => setFilter(category.value)}
-                  className={`px-4 py-2 rounded-full text-sm transition-colors ${
-                    filter === category.value 
-                      ? 'bg-primary-600 text-white' 
+                  className={`px-4 py-2 rounded-full text-sm transition-colors ${filter === category.value
+                      ? 'bg-primary-600 text-white'
                       : 'bg-dark-300 text-gray-300 hover:bg-dark-200'
-                  }`}
+                    }`}
                 >
                   {category.label}
                 </button>
@@ -133,7 +136,7 @@ const ProjectsPage = () => {
             </div>
           </motion.div>
         </SectionContainer>
-        
+
         {/* Projects Grid */}
         <SectionContainer id="projects-grid" className="pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,26 +149,26 @@ const ProjectsPage = () => {
                 className="card overflow-hidden group"
               >
                 <div className="relative h-100 overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-500 via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex space-x-4">
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
+                      <a
+                        href={project.link}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-primary-600 hover:bg-primary-700 text-white p-2 rounded-full transition-colors"
                       >
                         <ExternalLink className="h-5 w-5" />
                       </a>
-                      <a 
-                        href={project.github} 
-                        target="_blank" 
+                      <a
+                        href={project.github}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="bg-dark-400 hover:bg-dark-300 text-white p-2 rounded-full transition-colors"
                       >
@@ -174,17 +177,16 @@ const ProjectsPage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex flex-wrap gap-2 mb-3">
                     {project.categories.map(category => (
-                      <span 
-                        key={category} 
-                        className={`text-xs px-2 py-1 rounded-full ${
-                          category === 'Frontend' ? 'bg-primary-900 text-primary-300' :
-                          category === 'Design' ? 'bg-secondary-900 text-secondary-300' :
-                          'bg-accent-900 text-accent-300'
-                        }`}
+                      <span
+                        key={category}
+                        className={`text-xs px-2 py-1 rounded-full ${category === 'Frontend' ? 'bg-primary-900 text-primary-300' :
+                            category === 'Design' ? 'bg-secondary-900 text-secondary-300' :
+                              'bg-accent-900 text-accent-300'
+                          }`}
                       >
                         {category}
                       </span>
@@ -192,7 +194,7 @@ const ProjectsPage = () => {
                   </div>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mt-4">
                     {project.technologies.map(tech => (
                       <span key={tech} className="text-xs px-2 py-1 bg-dark-200 rounded-full">
@@ -205,10 +207,10 @@ const ProjectsPage = () => {
             ))}
           </div>
         </SectionContainer>
-        
+
         {/* Call to Action */}
         <SectionContainer id="projects-cta" className="py-20 bg-dark-300">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
@@ -219,9 +221,9 @@ const ProjectsPage = () => {
             <p className="text-xl mb-8">
               Check out my GitHub for additional projects, contributions, and code samples.
             </p>
-            <a 
-              href="https://github.com/aaronabil" 
-              target="_blank" 
+            <a
+              href="https://github.com/aaronabil"
+              target="_blank"
               rel="noopener noreferrer"
               className="btn btn-outline rounded-full inline-flex items-center"
             >

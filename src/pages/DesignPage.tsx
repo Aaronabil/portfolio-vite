@@ -124,13 +124,17 @@ const DesignPage = () => {
             transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1>
-              <ScrollVelocity
-                texts={['Design', 'Showcase']} 
-                velocity={100} 
-                className="custom-scroll-text mb-2"
-              />
-            </h1>
+            <div className="relative overflow-hidden">
+              <h1>
+                <ScrollVelocity
+                  texts={['Design', 'Showcase']} 
+                  velocity={100} 
+                  className="custom-scroll-text mb-2"
+                />
+              </h1>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-dark-400 to-transparent"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-dark-400 to-transparent"></div>
+            </div>
             <p className="text-xl mb-12">
               Exploring the intersection of aesthetics and functionality with design solutions that blend beauty, usability, and purpose.
             </p>
