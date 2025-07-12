@@ -72,7 +72,7 @@ const projects = [
     title: "Crypto App",
     description: "A crypto application that contains crypto trend charts, the latest news, and wallet demos.",
     image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/crypto.png",
-    link: "#",
+    link: "https://cryptoctabil.vercel.app/",
     github: "https://github.com/Aaronabil/project-crypto",
     categories: ["Frontend", "Design", "Security"],
     technologies: ["Typescript", "React", "Vite", "Tailwind CSS"]
