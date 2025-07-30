@@ -69,13 +69,23 @@ const projects = [
   },
   {
     id: 7,
-    title: "Crypto App",
+    title: "Cryptoctabil App",
     description: "A crypto application that contains crypto trend charts, the latest news, and wallet demos.",
     image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/crypto.png",
     link: "https://cryptoctabil.vercel.app/",
     github: "https://github.com/Aaronabil/project-crypto",
     categories: ["Frontend", "Design", "Security"],
     technologies: ["Typescript", "React", "Vite", "Tailwind CSS"]
+  },
+  {
+    id: 8,
+    title: "Basakrama App",
+    description: "An application for learning in a fun and enjoyable way about the language and culture of Indonesia",
+    image: "https://raw.githubusercontent.com/Aaronabil/Aaronabil.github.io/main/public/images/krama.jpg",
+    link: "https://krama-alpha.vercel.app/",
+    github: "https://github.com/Aaronabil/krama",
+    categories: ["Frontend", "Design"],
+    technologies: ["Typescript", "React", "Vite", "Tailwind CSS", "Supabase"]
   }
 ];
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench, Wallet, Bug } from 'lucide-react';
+import { Shield, Lock, GlobeLock, CheckCircle, ClipboardMinus, FileCode, Construction, ShieldAlert, LockKeyhole, Wrench, Wallet, Bug, BugPlay, Worm, NotebookText } from 'lucide-react';
 import PageTransition from '@/components/shared/PageTransition';
 import SectionContainer from '@/components/shared/SectionContainer';
 import ScrollVelocity from '@/components/reactbits/ScrollVelocity';
@@ -82,7 +82,7 @@ const securityPosts = [
   },
   {
     id: 9,
-    title: "Web Aplication Penetration Tets Report: DVWA.",
+    title: "Web Aplication Penetration Test Report: DVWA.",
     excerpt: "Sebagai bagian dari perjalanan belajar saya di bootcamp cybersecurity ID-Networkers (IDN.ID), saya berkesempatan untuk melakukan uji penetrasi aplikasi web secara penuh.",
     icon: <Bug className="h-8 w-8 text-accent-400" />,
     readTime: "7 min read",
@@ -115,6 +115,60 @@ const securityPosts = [
     readTime: "3 min read",
     date: "June 28, 2025",
     link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_report-pentest-mobile-activity-7344944122614452224-19pp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+  {
+    id: 13,
+    title: "Methodology Bug Bounty.",
+    excerpt: "Saya membuat report tentang methodology bug bounty versi saya sendiri",
+    icon: <BugPlay className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "July 13, 2025",
+    link: "https://drive.google.com/file/d/1nw9cXyGj3P8SHc2ayBmA5XJahtOnMs1u/view"
+  },
+  {
+    id: 14,
+    title: "The difference between using manual and automation tools in bug bounty activities.",
+    excerpt: "Disini saya menjelaskan perbedaan menggunakan tools manual dan automation pada kegiatan bug bounty versi saya sendiri.",
+    icon: <BugPlay className="h-8 w-8 text-accent-400" />,
+    readTime: "2 min read",
+    date: "July 13, 2025",
+    link: "https://drive.google.com/file/d/1_evz6Y_xUqvvQlTQedShKnKqWYuK6g5u/view"
+  },
+  {
+    id: 15,
+    title: "Red Teaming and Pentesting Differences.",
+    excerpt: "Disini saya menulis pendapat saya tentang perbedaan Red Teaming dan Penetration Testing.",
+    icon: <BugPlay className="h-8 w-8 text-accent-400" />,
+    readTime: "1 min read",
+    date: "July 13, 2025",
+    link: "https://drive.google.com/file/d/1_Yqz82rKHQ_J_iOw3n2PztEcu7iETZ-a/view"
+  },
+  {
+    id: 16,
+    title: "Initial Reverse Engineering Report: Aenjaris Loader Sample.",
+    excerpt: "Disini saya membuat report dan melakukan analyst terhadap malware.",
+    icon: <Worm className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "July 20, 2025",
+    link: "https://drive.google.com/file/d/1jR6X6RHA1HIKck8S3q37QdhfuOPpeKpQ/view?usp=sharing"
+  },
+  {
+    id: 17,
+    title: "Malware Detection with Sigma & YARA - Use Case & Rules Implementation.",
+    excerpt: "Disini saya membuat report, meresearch, dan mencoba Sigma dan YARA Rules sesuai IOC yang telah didapat dari report malware analyst.",
+    icon: <Worm className="h-8 w-8 text-accent-400" />,
+    readTime: "4 min read",
+    date: "July 27, 2025",
+    link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_yara-and-sigma-rule-activity-7355267705949601794-vcqK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
+  },
+  {
+    id: 18,
+    title: "Write Up Capture the Flag (CTF) at ID-Networkers.",
+    excerpt: "Disini saya membuat report dari hasil CTF saya di ID-Networkers sebagai penyeleksian terhadap bootcamp yang akan saya ikuti.",
+    icon: <NotebookText className="h-8 w-8 text-accent-400" />,
+    readTime: "20-30 min read",
+    date: "May 11, 2025",
+    link: "https://drive.google.com/file/d/1l0-fMgPJtPlypjbxVF478z-LX7jEg7P6/view?usp=drive_link"
   },
 
 ];
