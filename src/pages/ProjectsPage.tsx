@@ -51,7 +51,7 @@ const projects = [
     id: 5,
     title: "Library App",
     description: "A library application to be used in a school and organize all the books in the library.",
-    image: "https://sahabatsetara.id/wp-content/uploads/2021/11/ylswjsy7stw.jpg",
+    image: "https://cdn.prod.website-files.com/604a97c70aee09eed25ce991/61897a35583a9b51db018d3e_MartinPublicSeating-97560-Importance-School-Library-blogbanner1.jpg",
     link: "#",
     github: "https://github.com/Aaronabil/apk-perpustakaan",
     categories: ["Frontend"],
