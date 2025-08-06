@@ -51,7 +51,7 @@ const HomePage = () => {
               className="text-center max-w-3xl mx-auto"
             >
               <h1 className="mb-6 text-white">
-                <span className="block text-lg font-medium text-primary-400 mb-2">Hi There, I'm   Muhamad Nabil Faiz👋</span>
+                <span className="block text-lg font-medium text-primary-400 mb-2">Hi There, I'm   Muhamad Nabil👋</span>
                 <SplitText
                   text="Frontend Developer"
                   className="mb-2 text-white"
