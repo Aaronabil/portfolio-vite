@@ -170,6 +170,15 @@ const securityPosts = [
     date: "May 11, 2025",
     link: "https://drive.google.com/file/d/1l0-fMgPJtPlypjbxVF478z-LX7jEg7P6/view?usp=drive_link"
   },
+  {
+    id: 19,
+    title: "Wazuh Decoder and Ruleset Fine-Tuning Report for OpenStack Logs",
+    excerpt: "Di sini saya membuat laporan mengenai penyesuaian Wazuh Decoder dan Ruleset untuk log OpenStack.",
+    icon: <NotebookText className="h-8 w-8 text-accent-400" />,
+    readTime: "20-30 min read",
+    date: "August 21, 2025",
+    link: "https://drive.google.com/file/d/1IJfJ7SUBwHvHqkNPubsQ5wxQQ9HFC4fs/view?usp=sharing"
+  },
 
 ];
 
@@ -202,13 +211,13 @@ const CyberSecurityPage = () => {
 
   const IframeBadge = () => (
     <iframe
-    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5159881"
-    className="h-[88px] w-[340px] max-w-none rounded-md border-none object-contain mt-8"
-    scrolling="no"
-    allowTransparency={true}
-  />
+      src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5159881"
+      className="h-[88px] w-[340px] max-w-none rounded-md border-none object-contain mt-8"
+      scrolling="no"
+      allowTransparency={true}
+    />
   );
-  
+
   // const badges = Array(6).fill(0);
 
   return (
@@ -216,7 +225,7 @@ const CyberSecurityPage = () => {
       <div className="pt-16">
         {/* Header */}
         <SectionContainer id="security-header" className="py-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -225,13 +234,13 @@ const CyberSecurityPage = () => {
             <div className="relative overflow-hidden">
               <h1>
                 <ScrollVelocity
-                  texts={['Cybersecurity', 'Insights']} 
-                  velocity={100} 
+                  texts={['Cybersecurity', 'Insights']}
+                  velocity={100}
                   className="custom-scroll-text mb-2"
                 />
               </h1>
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-dark-400 to-transparent"></div>
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-dark-400 to-transparent"></div>
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-dark-400 to-transparent"></div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-dark-400 to-transparent"></div>
             </div>
             {/* <div className="relative my-8 flex h-[450px] w-full flex-row items-center justify-center overflow-hidden [perspective:1000px]">
   
@@ -287,13 +296,13 @@ const CyberSecurityPage = () => {
             </p>
           </motion.div>
         </SectionContainer>
-        
+
         {/* Security Practices */}
         <SectionContainer id="security-practices" className="py-24 bg-dark-300">
           <div className="mb-12">
             <h2 className="section-heading">Security Best Practices</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {securityPractices.map((practice, index) => (
               <motion.div
@@ -313,7 +322,7 @@ const CyberSecurityPage = () => {
             ))}
           </div>
         </SectionContainer>
-        
+
         {/* Security Framework */}
         <SectionContainer id="security-framework" className="py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -330,7 +339,7 @@ const CyberSecurityPage = () => {
               <p className="mb-6">
                 Building security into the development process from the beginning rather than treating it as an afterthought. This proactive approach ensures that security is an integral part of the application from its foundation.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-accent-900 rounded-full flex items-center justify-center mr-4">
@@ -343,7 +352,7 @@ const CyberSecurityPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-accent-900 rounded-full flex items-center justify-center mr-4">
                     <span className="text-accent-400 font-bold">2</span>
@@ -355,7 +364,7 @@ const CyberSecurityPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-accent-900 rounded-full flex items-center justify-center mr-4">
                     <span className="text-accent-400 font-bold">3</span>
@@ -367,7 +376,7 @@ const CyberSecurityPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-10 h-10 bg-accent-900 rounded-full flex items-center justify-center mr-4">
                     <span className="text-accent-400 font-bold">4</span>
@@ -381,7 +390,7 @@ const CyberSecurityPage = () => {
                 </div>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -390,9 +399,9 @@ const CyberSecurityPage = () => {
               className="relative"
             >
               <div className="rounded-lg overflow-hidden border border-dark-100 animate-glow">
-                <img 
-                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                  alt="Cybersecurity Protection" 
+                <img
+                  src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  alt="Cybersecurity Protection"
                   className="w-full h-auto"
                 />
               </div>
@@ -406,13 +415,13 @@ const CyberSecurityPage = () => {
             </motion.div>
           </div>
         </SectionContainer>
-        
+
         {/* Security Insights/Blog Posts */}
         <SectionContainer id="security-insights" className="py-24 bg-dark-300">
           <div className="mb-12">
             <h2 className="section-heading">Security Insights</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {visiblePosts.map((post, index) => (
               <motion.div
@@ -456,18 +465,18 @@ const CyberSecurityPage = () => {
             </div>
           )}
           <div className="relative overflow-hidden mt-8">
-          <Marquee className="[--duration:35s]">
-            <IframeBadge />
-          </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#181925] to-transparent"></div>
-  <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#181925] to-transparent"></div>
+            <Marquee className="[--duration:35s]">
+              <IframeBadge />
+            </Marquee>
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#181925] to-transparent"></div>
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-[#181925] to-transparent"></div>
           </div>
-          
+
         </SectionContainer>
-        
+
         {/* CTA Section */}
         <SectionContainer id="security-cta" className="py-24">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
