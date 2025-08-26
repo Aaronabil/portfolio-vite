@@ -162,22 +162,30 @@ const securityPosts = [
     link: "https://www.linkedin.com/posts/muhamad-nabil-faiz-amrullah_yara-and-sigma-rule-activity-7355267705949601794-vcqK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEIqCDMBqEpfj5ZxR7TNOB4LBfgErzERGZU"
   },
   {
-    id: 18,
     title: "Write Up Capture the Flag (CTF) at ID-Networkers.",
     excerpt: "Disini saya membuat report dari hasil CTF saya di ID-Networkers sebagai penyeleksian terhadap bootcamp yang akan saya ikuti.",
     icon: <NotebookText className="h-8 w-8 text-accent-400" />,
     readTime: "20-30 min read",
     date: "May 11, 2025",
     link: "https://drive.google.com/file/d/1l0-fMgPJtPlypjbxVF478z-LX7jEg7P6/view?usp=drive_link"
-  },
+  }, 
   {
     id: 19,
     title: "Wazuh Decoder and Ruleset Fine-Tuning Report for OpenStack Logs",
     excerpt: "Di sini saya membuat laporan mengenai penyesuaian Wazuh Decoder dan Ruleset untuk log OpenStack.",
     icon: <NotebookText className="h-8 w-8 text-accent-400" />,
-    readTime: "20-30 min read",
+    readTime: "3 min read",
     date: "August 21, 2025",
     link: "https://drive.google.com/file/d/1IJfJ7SUBwHvHqkNPubsQ5wxQQ9HFC4fs/view?usp=sharing"
+  },
+  {
+    id: 20,
+    title: "Write Up Capture the Flag (CTF) at Compfest17 Universitas Indonesia",\
+    excerp: "Di sini saya membuat report dari hasil CTF saya di Compfest17"
+    icon: <NotebookText className="h-8 w-8 text-accent-400" />,
+    readTime: "3 min read",
+    date: "August 25, 2025",
+    link: "https://write-up-aaronabil.notion.site/Write-Up-CTF-COMPFEST17-Universitas-Indonesia-25ad9750c6c880098736d2363c9ab6ec#25ad9750c6c88152aff8f5e7143dd379"
   },
 
 ];
