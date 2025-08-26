@@ -180,8 +180,8 @@ const securityPosts = [
   },
   {
     id: 20,
-    title: "Write Up Capture the Flag (CTF) at Compfest17 Universitas Indonesia",\
-    excerp: "Di sini saya membuat report dari hasil CTF saya di Compfest17"
+    title: "Write Up Capture the Flag (CTF) at Compfest17 Universitas Indonesia",
+    excerpt: "Di sini saya membuat report dari hasil CTF saya di Compfest17",
     icon: <NotebookText className="h-8 w-8 text-accent-400" />,
     readTime: "3 min read",
     date: "August 25, 2025",
